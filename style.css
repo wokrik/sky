@@ -1,0 +1,292 @@
+*{box-sizing: border-box;}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+.brown{background-color: #70603e;}
+.blue{background-color: #0075d9;}
+.orange{background-color: #ee4700;}
+
+.arrow{
+    border: solid #ccc;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+}
+
+.arrow-right{
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.next{
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 20px;
+}
+
+.next-little{
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 20px;
+}
+
+.arrow-left{
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.arrow-little{
+    border: solid #ccc;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.back{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 15px;
+    border-color: #6fb316;
+}
+
+.back:hover{
+    cursor: pointer;
+}
+
+.back-littlle{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 15px;
+}
+
+.pageWrapper {
+    background: #efeff4;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.tariff{
+    background: white;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.tariff__header, .periodDetail__header{
+    padding: 20px 0;
+}
+
+.tariff__name, .periodDetail__name{
+    color: #6fb316;
+}
+
+.tariff__speed{
+    display: inline-block;
+    padding: 10px 10px 10px 15px;
+    margin-left: -15px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.tariff__info{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tariff__info:hover{
+    cursor: pointer;
+}
+
+.tariff__prices{
+    font-size: 24px;
+}
+
+.tariff__options{
+    font-weight: 400;
+    margin-top: 15px;
+    padding-right: 20px;
+}
+
+.tariff__options .option {
+    margin: 0;
+}
+
+.tariff__more{
+    padding: 15px 20px 15px 0;
+}
+
+.tariff__link{
+    display: inline-block;
+    text-decoration: none;
+    color: #0075d9;
+    font-size: 18px;
+}
+
+.screenHeader{
+    text-align: center;
+    background: #f7f7f8;
+    position: relative;
+    padding: 12px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.period, .periodDetail{
+    padding-left: 15px;
+    background: white;
+    margin-bottom: 25px;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.period__info{
+    padding: 10px 0;
+    position: relative;
+}
+
+.period__info:hover{
+    cursor: pointer;
+}
+
+.period__long{
+    padding: 15px 0;
+    font-size: 20px;
+    color: #6fb316;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+}
+
+.period__long{
+    padding: 12px 0;
+}
+
+.period__monthPrice{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.periodDetail__header{
+    border-bottom: 1px solid #ccc;
+}
+
+.periodDetail__period{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.periodDetail__payment, .periodDetail__dates{
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.periodDetail__dates{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    color: #b6b6b6;
+}
+
+.periodDetail__button{
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    background: #6fb316;
+    font-size: 24px;
+    max-width: 650px;
+}
+
+.periodDetail__button:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 640px){
+    .tariffGroups, .periods{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .tariff, .period{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 49%;
+    }
+    
+    .tariff__more{
+        margin-top: auto; /* stick link to the bottom of tariff */
+    }
+    
+    .tariffGroups, .periods{
+        padding: 20px;
+    }
+    
+    .periods{
+        padding-top: 0;
+    }
+    
+    .periodDetails{
+        width: 600px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px){
+    .tariff, .period{
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .tariff, .period{
+        width: 31%;
+        margin-right: 2%;
+    }
+    
+    .tariffGroups, .periods{
+        justify-content: flex-start;
+        padding: 2%;
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
